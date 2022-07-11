@@ -9,7 +9,7 @@ function Contact(){
         <div>
             <div className='form'>
               <div className='form-body'>
-              <h1>Send details</h1>
+              <h2 >Send details</h2>
 
                 <div className='form-body'>
                 <input type='text' placeholder="Full Name" className="form_input"/>

@@ -6,7 +6,7 @@ const Live = () => {
 
     const [data, setData]=useState([]);
 
-    const getCoviddata = async()=> {
+    const getCovidData = async()=> {
         try{
             const response= await fetch('https://data.covid19india.org/data.json');
             const actualData = await response.json();
@@ -18,15 +18,16 @@ const Live = () => {
     }
 
     useEffect(() => {
-      getCoviddata();
+      getCovidData();
     }, []);
 
   return (
     <>
     <Navbar />
+    <div className='bodyy'>
     <div className='c'>
     <section className='formm'>
-        <h2>Covid - 19 Live Watch</h2>
+        <center><h1>Covid - 19 Live Watch</h1></center>
         <ul className='line'>
             <li className='form-in'>
                 <div>
@@ -82,6 +83,7 @@ const Live = () => {
             </li>
         </ul>
     </section>
+    </div>
     </div>
     </>
   )

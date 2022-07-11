@@ -1,19 +1,27 @@
 .body{
 background-color: brown;
-height: 330px;
-
+height: auto;
 }
+
+.bodyy{
+    background-color: brown;
+    height: auto;
+    
+    }
+
 .form{
     background-color: green;
-    border-radius: 5px;
+    border-radius: 500px;
     width: 300px;
     margin: 100px;
-    padding: 5px;
+    padding: 2px;
     height:300px; 
-    border-radius: 400%;
+    border-radius: 500%;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 1000%;
+
 }
+
 
 .form-body{
     text-align: left;
@@ -68,8 +76,12 @@ height: 330px;
     list-style-type:lower-greek;
 }
 .c{
-    background-color: #74992e;
+    border-radius: 500px;
+    width: auto;
+    margin: 100px;
+    padding: 5px;
     height: auto;
+    padding: 20px;
     display: flex;
     justify-content: center;
 

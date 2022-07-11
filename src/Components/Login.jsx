@@ -10,6 +10,7 @@ function Login(){
           <div className='form'>
             <div className='form-body'>
               <div className='form-body'>
+              <h2 >Login here...</h2>
                   <input  type="text" className='form_input' placeholder="user Gmail"/>
               </div>
               <div className='form-body'>

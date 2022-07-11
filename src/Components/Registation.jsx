@@ -11,11 +11,10 @@ function Registation(){
           <div className='form'>
             <div className='form-body'>
               <div className='form-body'>
-                  <input  type="text" className='form_input' placeholder="First Name"/>
+              <h2 >Register now</h2>
+                  <input  type="text" className='form_input' placeholder="Full Name"/>
               </div>
-              <div className='form-body'>
-                  <input  type="text" className='form_input' name="" placeholder="LastName"/>
-              </div>
+              
               <div className='form-body'>
                   <input  type="email" className='form_input' placeholder="Email"/>
               </div>
