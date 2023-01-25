@@ -1,0 +1,40 @@
+{
+  "get": [
+    {
+      "id": 1,
+      "name": "krishna",
+      "gmail": "pintucs9695@gmail.com",
+      "password": "pk123",
+      "cpassword": "pk123"
+    },
+    {
+      "id": 2,
+      "name": "krishna",
+      "gmail": "pintucs9695@gmail.com",
+      "password": "pk123",
+      "cpassword": "pk123"
+    },
+    {
+      "id": 7,
+      "name": "Ram",
+      "gmail": "pintucs9695@gmail.com",
+      "password": "pk123",
+      "cpassword": "pk123"
+    },
+    {
+      "name": "ram",
+      "gmail": "ram@gmail.com",
+      "password": "asd",
+      "cpassword": "asd",
+      "id": 8
+    },
+    {
+      "name": "pintuu",
+      "gmail": "pintu@gmail.com",
+      "password": "pkkk",
+      "cpassword": "pkkk",
+      "id": 9
+    },
+    []
+  ]
+}
