@@ -5,7 +5,7 @@ import Products from './Components/Products';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 
-function App(){
+const App=()=>{
 
     return(
         <div className='App'>

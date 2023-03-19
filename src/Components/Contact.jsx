@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import {Link} from 'react-router-dom'
-function Contact(){
+const Contact=()=>{
     return(
         <>
         <Navbar />

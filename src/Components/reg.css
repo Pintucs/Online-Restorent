@@ -50,6 +50,22 @@ height: auto;
 	color:#ffffff;
 }
 
+.header-btnn{
+	width: 200px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+    align-items: right;
+    font-size: 1rem;
+    margin-top: 5px;
+    font-family:'Lato';
+    background-color: #116b45;
+    box-shadow: 5px 10px 30px rgba(174, 175, 216, 0.336);
+    border-radius: 50px;
+	color:#ffffff;
+
+}
+
 .formm{
     background-color: green;
     border-radius: 5px;

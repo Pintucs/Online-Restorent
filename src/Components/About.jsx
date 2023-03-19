@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 function About(){
   return (
     <>
-    <Navbar />,
+    <Navbar />
     <div id='about'>
     <div className='about-text'>
         <h1> Upcomming event</h1>

@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 
 
 
-function Products(){
+const Products=()=>{
   return (
     <>
     <Navbar />

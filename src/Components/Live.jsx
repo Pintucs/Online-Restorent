@@ -3,9 +3,7 @@ import Navbar from './Navbar';
 import './reg.css'
 
 const Live = () => {
-
     const [data, setData]=useState([]);
-
     const getCovidData = async()=> {
         try{
             const response= await fetch('https://data.covid19india.org/data.json');

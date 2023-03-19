@@ -35,7 +35,7 @@ function Navbar(){
                 <li><Link to="/contact" smooth={true} duration={2000}>Contact</Link></li>
                 <li><Link to="/login" smooth={true} duration={2000}>Login</Link></li>
                 <li><Link to="/registation" smooth={true} duration={2000}>Registation</Link></li>
-                <li><Link to="/live" smooth={true} duration={2000}>Covid Live 🔴</Link></li>
+                {/* <li><Link to="/live" smooth={true} duration={2000}>Covid Live 🔴</Link></li> */}
                 <li><Link to="/ShowData" smooth={true} duration={2000}>ShowData</Link></li>
             </ul>
         </nav>

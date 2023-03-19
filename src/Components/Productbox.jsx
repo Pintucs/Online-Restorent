@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function Productbox(props){
+const Productbox=(props)=>{
   return (
     <div className='a-box'>
         <div className='a-b-img'>

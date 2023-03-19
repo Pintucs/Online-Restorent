@@ -8,23 +8,23 @@ let pintu= "";
 const cssStyle={};
 
 if(curDate>=1&&curDate<=12){
-    pintu="Good Morning";
+    pintu="Morning";
     cssStyle.color="red";
 }
 else if(curDate>12&&curDate<18){
-    pintu="Good Afternoon";
+    pintu="Afternoon";
     cssStyle.color="blue";
 }
 else if(curDate>18&&curDate<21){
-    pintu="Good Evening";
+    pintu="Evening";
     cssStyle.color='brown';
 }
 else{
-    pintu="Good Night";
+    pintu="Night";
     cssStyle.color="green";
 }
 
-function Timeduration(){
+const Timeduration=()=>{
     return (
 <h1 style={cssStyle}>{pintu} {curDate} O'clock</h1>
     )

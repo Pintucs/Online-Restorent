@@ -1,40 +1,74 @@
 {
   "get": [
     {
-      "id": 1,
-      "name": "krishna",
-      "gmail": "pintucs9695@gmail.com",
-      "password": "pk123",
-      "cpassword": "pk123"
+      "name": "krishnacs",
+      "gmail": "krishnacs@gmail.com",
+      "password": "123",
+      "cpassword": "123",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "krishna",
-      "gmail": "pintucs9695@gmail.com",
-      "password": "pk123",
-      "cpassword": "pk123"
+      "name": "Sintu kumar vishvakarma",
+      "gmail": "sintu@gmail.com",
+      "password": "sintu",
+      "cpassword": "sintu",
+      "id": 2
     },
     {
-      "id": 7,
-      "name": "Ram",
-      "gmail": "pintucs9695@gmail.com",
-      "password": "pk123",
-      "cpassword": "pk123"
+      "name": "Deeraj vishvakarma",
+      "gmail": "deeraj@gmail.com",
+      "password": "deeraj",
+      "cpassword": "deeraj",
+      "id": 3
     },
     {
-      "name": "ram",
-      "gmail": "ram@gmail.com",
-      "password": "asd",
-      "cpassword": "asd",
+      "name": "Jeetu kumar",
+      "gmail": "jeetu@gmail.com",
+      "password": "jeetu",
+      "cpassword": "jeetu",
+      "id": 4
+    },
+    {
+      "name": "Rohit singh",
+      "gmail": "rohit@gmail.com",
+      "password": "rohit",
+      "cpassword": "rohit",
+      "id": 5
+    },
+    {
+      "name": "Rinku vishvakarma",
+      "gmail": "rinku@gmail.com",
+      "password": "rintu",
+      "cpassword": "rinku",
+      "id": 6
+    },
+    {
+      "name": "rohit",
+      "gmail": "rohotsingh@gmail.com",
+      "password": "rohitt",
+      "cpassword": "rohitt",
+      "id": 7
+    },
+    {
+      "name": "Public",
+      "gmail": "public@gmail.com",
+      "password": "public",
+      "cpassword": "public",
       "id": 8
     },
     {
-      "name": "pintuu",
-      "gmail": "pintu@gmail.com",
-      "password": "pkkk",
-      "cpassword": "pkkk",
+      "name": "Deepanshi",
+      "gmail": "deepanshi@gmail.com",
+      "password": "deepanshi",
+      "cpassword": "deepanshi",
       "id": 9
     },
-    []
+    {
+      "name": "pintu kumar ",
+      "gmail": "softwere@gmail.com",
+      "password": "soft",
+      "cpassword": "soft",
+      "id": 10
+    }
   ]
 }

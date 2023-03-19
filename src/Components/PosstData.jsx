@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Navbar from "./Navbar";
 import { Link } from 'react-router-dom'
 import './reg.css'
-import Covid from './Covid';
-function Registation() {
+
+const PosstData=()=> {
     const [user, setUser] = useState([]);
     const getData = (e) => {
         let name, value;
@@ -11,7 +10,7 @@ function Registation() {
         value = e.target.value;
         setUser({ ...user, [name]: value });
 
-    } 
+    }
     const postData = () => {
         fetch("http://localhost:3000/get", {
             method: 'POST',
@@ -25,21 +24,15 @@ function Registation() {
                 result.json()
                     .then((response) => response)
             })
-
-        alert("Thank You For Registration")
-        window.location.reload(false)
     }
 
     return (
         <>
-            <Navbar />
-
             <div className='body'>
                 <div>
-                    <div className='form'>
+                    <div>
                         <div className='form-body'>
                             <div className='form-body'>
-                                <h2 >Register now</h2>
                                 <input type="text" className='form_input' placeholder="Full Name" name="name" onChange={getData} />
                             </div>
                             <div className='form-body'>
@@ -52,16 +45,14 @@ function Registation() {
                                 <input type="password" className='form_input' placeholder="Confirm Password" name="cpassword" onChange={getData} />
                             </div>
                             <div className='header-btn'>
-                                <Link to='/registation' onClick={postData}><p>Registation</p></Link>
+                                <Link to='/showdata' onClick={postData}><p>Add Data</p></Link>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <Covid />
         </>
     )
 }
 
-export default Registation
+export default PosstData
