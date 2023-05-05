@@ -14,7 +14,7 @@ const ShowData = () => {
     const [cpassword, setCPassword] = useState('');
     const [userId,setUserId]=useState(null)
     
-    // show data
+    // show data here
     const showData = () => {
         axios.get("http://localhost:3000/get").then((res) => setUser(res.data))
     }
