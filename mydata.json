@@ -1,24 +1,10 @@
 {
   "get": [
     {
-      "name": "krishnacs",
-      "gmail": "krishnacs@gmail.com",
-      "password": "123",
-      "cpassword": "123",
-      "id": 1
-    },
-    {
-      "name": "Sintu kumar vishvakarma",
-      "gmail": "sintu@gmail.com",
-      "password": "sintu",
-      "cpassword": "sintu",
-      "id": 2
-    },
-    {
       "name": "Deeraj vishvakarma",
       "gmail": "deeraj@gmail.com",
-      "password": "deeraj",
-      "cpassword": "deeraj",
+      "password": "deeraj k",
+      "cpassword": "deeraj k",
       "id": 3
     },
     {
@@ -50,13 +36,6 @@
       "id": 7
     },
     {
-      "name": "Public",
-      "gmail": "public@gmail.com",
-      "password": "public",
-      "cpassword": "public",
-      "id": 8
-    },
-    {
       "name": "Deepanshi",
       "gmail": "deepanshi@gmail.com",
       "password": "deepanshi",
@@ -64,11 +43,18 @@
       "id": 9
     },
     {
-      "name": "pintu kumar ",
+      "name": "pintu kumar vishvakarma",
       "gmail": "softwere@gmail.com",
-      "password": "soft",
-      "cpassword": "soft",
+      "password": "softwere",
+      "cpassword": "softwere",
       "id": 10
+    },
+    {
+      "name": "shai",
+      "gmail": "shai@gmail.com",
+      "password": "shai",
+      "cpassword": "shai",
+      "id": 11
     }
   ]
 }
