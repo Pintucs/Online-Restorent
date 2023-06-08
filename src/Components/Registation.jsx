@@ -1,67 +1,76 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { Link } from 'react-router-dom'
-import './reg.css'
-import Covid from './Covid';
-function Registation() {
-    const [user, setUser] = useState([]);
-    const getData = (e) => {
-        let name, value;
-        name = e.target.name;
-        value = e.target.value;
-        setUser({ ...user, [name]: value });
+import aboutimage from "../images/about.png";
+import { useNavigate } from "react-router-dom";
+function Registration() {
+  const [user, setUser] = useState([]);
+  const navigate = useNavigate();
+  const getData = (e) => {
+    let name, value;
+    name = e.target.name;
+    value = e.target.value;
+    setUser({ ...user, [name]: value });
+  };
+  const postData = () => {
+    fetch("http://localhost:4000/registration", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then((result) => {
+      result.json().then((response) => response);
+    });
+    navigate("/");
+    alert("Thank You For Registration");
+  };
 
-    } 
-    const postData = () => {
-        fetch("http://localhost:3000/get", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
-            .then((result) => {
-                result.json()
-                    .then((response) => response)
-            })
-
-        alert("Thank You For Registration")
-        window.location.reload(false)
-    }
-
-    return (
-        <>
-            <Navbar />
-
-            <div className='body'>
-                <div>
-                    <div className='form'>
-                        <div className='form-body'>
-                            <div className='form-body'>
-                                <h2 >Register now</h2>
-                                <input type="text" className='form_input' placeholder="Full Name" name="name" onChange={getData} />
-                            </div>
-                            <div className='form-body'>
-                                <input type="gmail" className='form_input' placeholder="Email" name="gmail" onChange={getData} />
-                            </div>
-                            <div className='form-body'>
-                                <input type="password" className='form_input' placeholder="Password" name="password" onChange={getData} />
-                            </div>
-                            <div className='form-body'>
-                                <input type="password" className='form_input' placeholder="Confirm Password" name="cpassword" onChange={getData} />
-                            </div>
-                            <div className='header-btn'>
-                                <Link to='/registation' onClick={postData}><p>Registation</p></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+  return (
+    <>
+      <Navbar />
+      <div id="about">
+        <div className="about-text">
+          <h1> Register now</h1>
+          <div className="form">
+            <div className="form-body">
+              <input
+                type="text"
+                className="form_input"
+                placeholder="Full Name"
+                name="name"
+                onChange={getData}
+              />
             </div>
-            <Covid />
-        </>
-    )
+            <div className="form-body">
+              <input
+                type="gmail"
+                className="form_input"
+                placeholder="Email"
+                name="gmail"
+                onChange={getData}
+              />
+            </div>
+            <div className="form-body">
+              <input
+                type="password"
+                className="form_input"
+                placeholder="Password"
+                name="password"
+                onChange={getData}
+              />
+            </div>
+            <div className="form-body">
+              <button onClick={postData}>Registration</button>
+            </div>
+          </div>
+        </div>
+        <div className="about-image">
+          <img src={aboutimage} alt="" />
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Registation
+export default Registration;

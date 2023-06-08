@@ -10,6 +10,8 @@ import Order from './Components/Order';
 import Products from './Components/Products';
 import Registation from './Components/Registation';
 import ShowData from './Components/ShowData';
+import UpdateData from './Components/UpdateData';
+import ContactData from './Components/ContactData';
 
 
 
@@ -26,6 +28,9 @@ const Rounting = () => {
       <Route path='/header' element={<Header />}/>
       <Route path='/products' element={<Products />}/>
       <Route path='/registation' element={<Registation />}/>
+      <Route path='/updatedata/:id' element={<UpdateData />}/>
+      <Route path='/contactdata' element={<ContactData />}/>
+      
       <Route path='/live' element={<Live />}/>
     </Routes>
 

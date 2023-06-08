@@ -1,29 +1,30 @@
 import React from 'react'
 import Navbar from "./Navbar";
-import {Link} from 'react-router-dom'
-import './reg.css'
+import aboutimage from '../images/about.png'
 const Login=()=>{
 
     return(
         <>
         <Navbar /> 
-       <div className='body'>
-          <div className='form'>
-            <div className='form-body'>
+        <div id='about'>
+        <div className='about-text'>
+        <h1> Login here...</h1>
+        <div className='form'>
               <div className='form-body'>
-              <h2 >Login here...</h2>
                   <input  type="text" className='form_input' placeholder="user Gmail"/>
               </div>
               <div className='form-body'>
                   <input type="password" className='form_input'  placeholder="Password"/>
               </div>
-              <div className='header-btn'>
-                <Link to='/'><p>Login</p></Link>
+              <div className='form-body'>
+              <button className="btn btn-primary" >Submit </button>
               </div>
             </div>
-          </div> 
-        </div>
-
+      </div>   
+      <div className='about-image'>
+        <img src={aboutimage} alt='' />
+      </div>
+      </div>
         </>
         
     )

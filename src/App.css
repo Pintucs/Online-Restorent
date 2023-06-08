@@ -225,6 +225,7 @@ nav .menu-btn,
     color: #3d2514;
     border: 2px solid #3d2514;
 }
+
 #about{
     margin-top:100px ;
 	width:100%;
@@ -242,8 +243,8 @@ nav .menu-btn,
     width: 45%;
     color: #fff;
     text-align: left;
-    
 }
+
 .about-text h1{
 	font-size: 3.5rem;
 	color:#3d2514;

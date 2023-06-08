@@ -10,15 +10,12 @@ height: auto;
     }
 
 .form{
-    background-color: green;
-    border-radius: 500px;
-    width: 300px;
-    margin: 100px;
+    background-color: rgb(55, 46, 46);
+    width: 100%;
+    margin: 0px;
     padding: 2px;
-    height:300px; 
-    border-radius: 500%;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 1000%;
+    height:100%; 
+    box-shadow:15px 15px 40px 30px #384640
 
 }
 

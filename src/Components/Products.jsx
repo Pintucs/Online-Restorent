@@ -12,7 +12,6 @@ const Products=()=>{
     <Navbar />
     <div id='products'>
     <h1>Choose & Enjoy</h1>
-    <p>Order Now</p>
       <div className='a-container'>
         <Productbox image={pimage1} title="Luger Burger" />
         <Productbox image={pimage2} title="Luger Burger" />

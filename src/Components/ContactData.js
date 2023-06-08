@@ -1,65 +1,59 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import aboutimage from "../images/about.png";
-import Navbar from "./Navbar";
-import {Link } from "react-router-dom";
 
-const ShowData = () => {
+const ContactData = () => {
   const [user, setUser] = useState([]);
 
   const showData = async () => {
-    const res = await axios.get("http://localhost:4000/showData");
+    const res = await axios.get("http://localhost:4000/showcontactdata");
     setUser(res.data);
   };
-
+  
   useEffect(() => {
     showData();
   }, []);
 
   const deleteData = async (id) => {
-    await axios.delete(`http://localhost:4000/user/${id}`);
+    await axios.delete(`http://localhost:4000/contact/${id}`);
     showData();
   };
 
-
   return (
     <>
-      <Navbar />
       <div id="about">
         <div className="about-text">
-          <h1>Show Data</h1>
+         <h1>Commented Data</h1>
+         {user.map((data, index) => (
           <div className="form">
             <div className="form-body">
               <table>
-                {user.map((data, index) => (
+                
                   <tr key={index}>
                     <td>{data.name}</td>
                     <td>{data.gmail}</td>
+                    <td>{data.comment}</td>
                     <td>
                       <button
                         onClick={() => deleteData(data._id)}
-                        className="btn btn-primary"
                       >
                         Delete Data
                       </button>
                     </td>
-                    <td>
-                      <Link to={"/updatedata/" + data._id}>
-                        Update Data
-                      </Link>
-                    </td>
                   </tr>
-                ))}
+                
               </table>
             </div>
           </div>
+          ))}
         </div>
-          <div className="about-image">
-            <img src={aboutimage} alt="" />
-          </div>
+        <div className="about-image">
+          <img src={aboutimage} alt="" />
+        </div>
       </div>
     </>
   );
 };
 
-export default ShowData;
+
+export default ContactData;
