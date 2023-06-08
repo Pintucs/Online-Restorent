@@ -12,7 +12,7 @@ const PosstData=()=> {
 
     }
     const postData = () => {
-        fetch("http://localhost:3000/get", {
+        fetch("https://online-restorent.onrender.com/get", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',

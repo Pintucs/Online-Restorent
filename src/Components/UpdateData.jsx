@@ -11,7 +11,7 @@ const UpdateData = ({id}) => {
     const params=useParams()
 
     const getProduct = useCallback(async () => {
-      let result = await fetch(`http://localhost:4000/user/${params.id}`)
+      let result = await fetch(`https://online-restorent.onrender.com/user/${params.id}`)
       result = await result.json()
       console.log(result)
       setName(result.name);
@@ -24,7 +24,7 @@ const UpdateData = ({id}) => {
     }, [getProduct]);
 
     const updatedata= async()=> {
-            let result = await fetch(`http://localhost:4000/user/${params.id}`, {
+            let result = await fetch(`https://online-restorent.onrender.com/user/${params.id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',

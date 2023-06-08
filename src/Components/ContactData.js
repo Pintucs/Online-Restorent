@@ -6,7 +6,7 @@ const ContactData = () => {
   const [user, setUser] = useState([]);
 
   const showData = async () => {
-    const res = await axios.get("http://localhost:4000/showcontactdata");
+    const res = await axios.get("https://online-restorent.onrender.com/showcontactdata");
     setUser(res.data);
   };
   
@@ -15,7 +15,7 @@ const ContactData = () => {
   }, []);
 
   const deleteData = async (id) => {
-    await axios.delete(`http://localhost:4000/contact/${id}`);
+    await axios.delete(`https://online-restorent.onrender.com/contact/${id}`);
     showData();
   };
 

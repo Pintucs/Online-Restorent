@@ -12,7 +12,7 @@ function Registration() {
     setUser({ ...user, [name]: value });
   };
   const postData = () => {
-    fetch("http://localhost:4000/registration", {
+    fetch("https://online-restorent.onrender.com/registration", {
       method: "POST",
       headers: {
         Accept: "application/json",

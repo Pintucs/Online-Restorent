@@ -12,9 +12,9 @@ const Contact = () => {
     value = e.target.value;
     setUser({ ...user, [name]: value });
   };
-  // "http://localhost:4000/showContactData"
+
   const postData = () => {
-    fetch("http://localhost:4000/contact", {
+    fetch("https://online-restorent.onrender.com/contact", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -25,8 +25,6 @@ const Contact = () => {
       result.json().then((response) => response);
     });
     setFs(true)
-    // navigate("/contactdata");
-    // alert("Thank You For your response");
   };
 
   return (
