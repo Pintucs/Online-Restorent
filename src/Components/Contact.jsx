@@ -5,7 +5,7 @@ import ContactData from "./ContactData";
 
 const Contact = () => {
   const [user, setUser] = useState([]);
-  const [fs,setFs] = useState(false);
+  const [fs, setFs] = useState(false);
   const getData = (e) => {
     let name, value;
     name = e.target.name;
@@ -24,7 +24,17 @@ const Contact = () => {
     }).then((result) => {
       result.json().then((response) => response);
     });
-    setFs(true)
+  };
+  const showComments = () => {
+    setFs(true);
+  };
+  const style = {
+    width: "100%",
+    padding: "12px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    resize: "vertical",
+    margin: "8px",
   };
 
   return (
@@ -34,13 +44,14 @@ const Contact = () => {
         <div className="about-text">
           <h1> Send details</h1>
           <div className="form">
-          <div className="form-body">
+            <div className="form-body">
               <input
                 type="text"
                 className="form_input"
                 placeholder="Full Name"
                 name="name"
                 onChange={getData}
+                style={style}
               />
             </div>
             <div className="form-body">
@@ -50,6 +61,7 @@ const Contact = () => {
                 placeholder="Email"
                 name="gmail"
                 onChange={getData}
+                style={style}
               />
             </div>
             <div className="form-body">
@@ -58,11 +70,12 @@ const Contact = () => {
                 placeholder="Write Here......"
                 name="comment"
                 onChange={getData}
-              >
-              </textarea>
+                style={style}
+              ></textarea>
             </div>
             <div className="form-body">
               <button onClick={postData}>Submit </button>
+              <button onClick={showComments}>View Comments </button>
             </div>
           </div>
         </div>
@@ -71,8 +84,7 @@ const Contact = () => {
           <img src={aboutimage} alt="" />
         </div>
       </div>
-      { fs ?      
-      <ContactData />:null}
+      {fs ? <ContactData /> : null}
     </>
   );
 };

@@ -23,7 +23,16 @@ function Registration() {
       result.json().then((response) => response);
     });
     navigate("/");
-    alert("Thank You For Registration");
+    alert("Thank You For Registration")
+    
+  };
+  const style = {
+    width: "100%",
+    padding: "12px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    resize: "vertical",
+    margin: "8px",
   };
 
   return (
@@ -36,28 +45,28 @@ function Registration() {
             <div className="form-body">
               <input
                 type="text"
-                className="form_input"
                 placeholder="Full Name"
                 name="name"
                 onChange={getData}
+                style={style}
               />
             </div>
             <div className="form-body">
               <input
                 type="gmail"
-                className="form_input"
                 placeholder="Email"
                 name="gmail"
                 onChange={getData}
+                style={style}
               />
             </div>
             <div className="form-body">
               <input
                 type="password"
-                className="form_input"
                 placeholder="Password"
                 name="password"
                 onChange={getData}
+                style={style}
               />
             </div>
             <div className="form-body">

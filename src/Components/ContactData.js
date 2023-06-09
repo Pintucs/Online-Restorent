@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import aboutimage from "../images/about.png";
 
 const ContactData = () => {
   const [user, setUser] = useState([]);
 
   const showData = async () => {
-    const res = await axios.get("https://online-restorent.onrender.com/showcontactdata");
+    const res = await axios.get(
+      "https://online-restorent.onrender.com/showcontactdata"
+    );
     setUser(res.data);
   };
-  
+
   useEffect(() => {
     showData();
   }, []);
@@ -18,42 +19,38 @@ const ContactData = () => {
     await axios.delete(`https://online-restorent.onrender.com/contact/${id}`);
     showData();
   };
-
+  const style = {
+    margin: "3px",
+    color: "white",
+    backgroundColor: "brown",
+    boxShadow: "10px 10px 10px 10px red",
+  };
   return (
     <>
-      <div id="about">
-        <div className="about-text">
-         <h1>Commented Data</h1>
-         {user.map((data, index) => (
-          <div className="form">
-            <div className="form-body">
-              <table>
-                
-                  <tr key={index}>
-                    <td>{data.name}</td>
-                    <td>{data.gmail}</td>
-                    <td>{data.comment}</td>
-                    <td>
-                      <button
-                        onClick={() => deleteData(data._id)}
-                      >
-                        Delete Data
-                      </button>
-                    </td>
-                  </tr>
-                
-              </table>
-            </div>
-          </div>
+      <div id="aboutt">
+        <div className="aboutt-text">
+          <h1>Commented Data</h1>
+          {user.map((data, index) => (
+            <table style={style}>
+              <tr key={index}>
+                <td style={{ width: "16%", color: "black" }}>{data.name}</td>
+                <td style={{ width: "16%", color: "black" }}>{data.gmail}</td>
+                <td style={{ width: "50%", padding: "10px", color: "black" }}>
+                  {data.comment}
+                </td>
+                <td>
+                  <button onClick={() => deleteData(data._id)}>
+                    Delete Data
+                  </button>
+                </td>
+              </tr>
+              <tr></tr>
+            </table>
           ))}
-        </div>
-        <div className="about-image">
-          <img src={aboutimage} alt="" />
         </div>
       </div>
     </>
   );
 };
-
 
 export default ContactData;

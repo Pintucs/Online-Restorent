@@ -10,7 +10,7 @@ function Clock() {
   }, []);
 
   return (
-    <div style={{color:"brown"}}>
+    <div style={{ color: "brown" }}>
       <h1>{currentTime.toLocaleTimeString()}</h1>
     </div>
   );
