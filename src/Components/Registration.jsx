@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import aboutimage from "../images/about.png";
-import { useNavigate } from "react-router-dom";
+import Alert from './PopUp';
 function Registration() {
+  const [showModal, setShowModal] = useState(false);
   const [user, setUser] = useState([]);
-  const navigate = useNavigate();
   const getData = (e) => {
     let name, value;
     name = e.target.name;
@@ -22,8 +22,8 @@ function Registration() {
     }).then((result) => {
       result.json().then((response) => response);
     });
-    navigate("/");
-    alert("Thank You For Registration")
+    // alert("Thank You For Registration")
+    setShowModal(true);
     
   };
   const style = {
@@ -78,6 +78,7 @@ function Registration() {
           <img src={aboutimage} alt="" />
         </div>
       </div>
+      <Alert showModal={showModal} TextLable="Registration Successful" />
     </>
   );
 }

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import aboutimage from "../images/about.png";
 import ContactData from "./ContactData";
+import Alert from './PopUp';
 
 const Contact = () => {
   const [user, setUser] = useState([]);
   const [fs, setFs] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const getData = (e) => {
     let name, value;
     name = e.target.name;
@@ -24,6 +26,7 @@ const Contact = () => {
     }).then((result) => {
       result.json().then((response) => response);
     });
+    setShowModal(true);
   };
   const showComments = () => {
     setFs(true);
@@ -85,6 +88,7 @@ const Contact = () => {
         </div>
       </div>
       {fs ? <ContactData /> : null}
+      <Alert showModal={showModal} TextLable="Thank you for your response !!!" />
     </>
   );
 };

@@ -1,46 +1,29 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { Modal } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
-const Popup = ({ showModal, onClose }) => {
+const Popup = ({ showModal,TextLable}) => {
+  const navigate = useNavigate();
 
-  const popup= {
-    position: "fixed",
-    top:" 0",
-    left: "0",
-    width: "100%",
-    height: "100%",
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    display: 'none',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-  
-  // .popup:target {
-  //   display: flex,
-  // }
-  
-  const popupC ={
-    backgroundColor: "#fff",
-    padding: "20px",
-    borderRadius:" 5px",
-    maxWidth: "400px",
-    textAlign: "center"
-  }
-  
-  const closeButton ={
-    marginTop: "10px"}
-  
+  useEffect(() => {
+    if (showModal) {
+      const timer = setTimeout(() => {
+        navigate('/');
+      }, 2000);
 
-
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [showModal, navigate]);
 
   return (
-    <div style={popup}>
-      <div style={popupC}>
-        <h2>Popup Content</h2>
-        <p>This is the content of the popup.</p>
-        <button style={closeButton} onClick={onClose} >Close</button>
-      </div>
-    </div>
-  )
-}
+    <Modal show={showModal} backdrop="static" keyboard={false} >
+      <Modal.Header closeButton style={{backgroundColor:"green",color:"white"}}>
+        <Modal.Title>{TextLable}</Modal.Title>
+      </Modal.Header>
+    </Modal>
+  );
+};
 
-export default Popup
+export default Popup;

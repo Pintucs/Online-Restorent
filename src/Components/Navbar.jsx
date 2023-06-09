@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <nav className={nav ? "nav active" : "nav"}>
       <Timeduration />
-      <Link to="/" className="logo" smooth={true} duration={2000}>
+      <Link to="/products" className="logo" smooth={true} duration={2000} >
         <img src={logo} alt="" />
       </Link>
       <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -32,23 +32,22 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/about" smooth={true} duration={2000}>
+          <Link to="/about" smooth={true} duration={2000} style={{textDecoration: "none"}}>
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" smooth={true} duration={2000}>
+          <Link to="/contact" smooth={true} duration={2000} style={{textDecoration: "none"}}>
             Contact
           </Link>
         </li>
-        {/* <li><Link to="/login" smooth={true} duration={2000}>Login</Link></li> */}
         <li>
-          <Link to="/registration" smooth={true} duration={2000}>
+          <Link to="/registration" smooth={true} duration={2000} style={{textDecoration: "none"}}>
           Registration
           </Link>
         </li>
         <li>
-          <Link to="/ShowData" smooth={true} duration={2000}>
+          <Link to="/ShowData" smooth={true} duration={2000} style={{textDecoration: "none"}}>
             ShowData
           </Link>
         </li>
