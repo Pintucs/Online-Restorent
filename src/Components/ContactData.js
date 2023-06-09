@@ -20,6 +20,7 @@ const ContactData = () => {
     showData();
   };
   const style = {
+    width: "100%",
     margin: "3px",
     color: "white",
     backgroundColor: "brown",
@@ -33,9 +34,9 @@ const ContactData = () => {
           {user.map((data, index) => (
             <table style={style}>
               <tr key={index}>
-                <td style={{ width: "16%", color: "black" }}>{data.name}</td>
-                <td style={{ width: "16%", color: "black" }}>{data.gmail}</td>
-                <td style={{ width: "50%", padding: "10px", color: "black" }}>
+                <td style={{ width: "16%",padding:"10px"}}>{data.name}</td>
+                <td style={{ width: "16%"}}>{data.gmail}</td>
+                <td style={{ width: "50%"}}>
                   {data.comment}
                 </td>
                 <td>

@@ -88,8 +88,7 @@ const Contact = () => {
         </div>
       </div>
       {fs ? <ContactData /> : null}
-      {/* <Alert showModal={showModal} TextLable="Thank you for your response !!!" /> */}
-      <Alert showModal={showModal} TextLable="Deepanshiya kuttiya  !!!" />
+      <Alert showModal={showModal} TextLable="Thank you for your response !!!" />
     </>
   );
 };

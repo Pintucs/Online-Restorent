@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 
 const App = () => {
+  
   return (
     <div className="App">
       {

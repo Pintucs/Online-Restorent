@@ -48,9 +48,9 @@ const ShowData = () => {
                   </td>
                   <td style={{ width: "20%" }}>
                     <button>
-                      <Link
+                      <Link style={{textDecoration: "none",color: "white"}}
                         to={"/updatedata/" + data._id}
-                        style={{ color: "white" }}
+                        
                       >
                         Update Data
                       </Link>
