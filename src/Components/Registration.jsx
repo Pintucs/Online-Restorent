@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import aboutimage from "../images/about.png";
-import Alert from './PopUp';
+import Alert from "./PopUp";
 function Registration() {
   const [showModal, setShowModal] = useState(false);
   const [user, setUser] = useState([]);
@@ -22,10 +22,9 @@ function Registration() {
     }).then((result) => {
       result.json().then((response) => response);
     });
-    // alert("Thank You For Registration")
     setShowModal(true);
-    
   };
+  localStorage.setItem("user", JSON.stringify(user));
   const style = {
     width: "100%",
     padding: "12px",

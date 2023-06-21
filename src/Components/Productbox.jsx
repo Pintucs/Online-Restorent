@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import Alert from './PopUp';
+import { useNavigate } from "react-router-dom";
 const Productbox = (props) => {
   const [showModal, setShowModal] = useState(false);
+  const navigate=useNavigate()
+  const Auth = localStorage.getItem("user");
+  useEffect(() => {
+    console.log(Auth);
+  }, [Auth]);
+  
   const order=()=>{
-    setShowModal(true)
+    if(Auth){
+      setShowModal(true)
+    }
+    else{
+      navigate("/registration")
+    }
   }
   return (
     <>
