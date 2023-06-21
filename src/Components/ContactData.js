@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+// import { Button } from "react-bootstrap";
 
 const ContactData = () => {
   const [user, setUser] = useState([]);
@@ -15,41 +16,36 @@ const ContactData = () => {
     showData();
   }, []);
 
-  const deleteData = async (id) => {
-    await axios.delete(`https://online-restorent.onrender.com/contact/${id}`);
-    showData();
-  };
+  // const deleteData = async (id) => {
+  //   await axios.delete(`https://online-restorent.onrender.com/contact/${id}`);
+  //   showData();
+  // };
   const style = {
     width: "100%",
-    margin: "3px",
+    margin: "10px",
     color: "white",
-    backgroundColor: "brown",
-    boxShadow: "10px 10px 10px 10px red",
+    backgroundColor: "gray",
+    boxShadow: "10px 10px 10px 10px LightGray",
+    overflow: "auto"
+
   };
   return (
     <>
-      <div id="aboutt">
-        <div className="aboutt-text">
+      <div className="container position-relative p-3">
           <h1>Commented Data</h1>
           {user.map((data, index) => (
-            <table style={style}>
-              <tr key={index}>
-                <td style={{ width: "16%",padding:"10px"}}>{data.name}</td>
-                <td style={{ width: "16%"}}>{data.gmail}</td>
-                <td style={{ width: "50%"}}>
-                  {data.comment}
-                </td>
-                <td>
-                  <button onClick={() => deleteData(data._id)}>
-                    Delete Data
-                  </button>
-                </td>
-              </tr>
-              <tr></tr>
-            </table>
+            <div key={index} style={style}>
+            <div className="col-12 col-sm-6 p-2"><b>{data.name}</b></div>
+            <div className="col-12 p-2">{data.comment}</div>
+            {/* <div className="col-12 col-sm-3">{data.gmail}</div> */}
+            {/* <div className="col-12 col-sm-3">
+            <Button onClick={() => deleteData(data._id)}>
+             Delete Data
+            </Button>
+            </div> */}
+          </div>
           ))}
         </div>
-      </div>
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const ShowData = () => {
   const [user, setUser] = useState([]);
@@ -27,40 +28,42 @@ const ShowData = () => {
     color: "white",
     backgroundColor: "brown",
     boxShadow: "10px 10px 10px 10px red",
+    overflow: "auto",
   };
 
   return (
     <>
       <Navbar />
-      <div id="aboutt">
-        <div className="aboutt-text">
-          <h1>Show Data</h1>
-          {user.map((data, index) => (
-            <table style={style}>
-              <tbody>
-                <tr key={index}>
-                  <td style={{ width: "20%", padding: "10px" }}>{data.name}</td>
-                  <td style={{ width: "20%" }}>{data.gmail}</td>
-                  <td style={{ width: "20%" }}>
-                    <button onClick={() => deleteData(data._id)}>
-                      Delete Data
-                    </button>
-                  </td>
-                  <td style={{ width: "20%" }}>
-                    <button>
-                      <Link style={{textDecoration: "none",color: "white"}}
-                        to={"/updatedata/" + data._id}
-                        
-                      >
-                        Update Data
-                      </Link>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          ))}
-        </div>
+      <div className="row m-5 pt-3">
+        <h1>Show Data</h1>
+        {user.map((data, index) => (
+          <div
+            key={index}
+            className="col-lg-3 col-md-4 col-sm-6 p-3"
+            style={{ paddingBottom: "15px" }}
+          >
+            <div className="card" style={style}>
+              <div className="card-body">
+                <h5 className="card-title">{data.name}</h5>
+                <p className="card-text">{data.gmail}</p>
+                <div className="d-grid gap-2">
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => deleteData(data._id)}
+                  >
+                    Delete Data
+                  </button>
+                  <Link
+                    className="btn btn-secondary"
+                    to={"/updatedata/" + data._id}
+                  >
+                    Update Data
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );
