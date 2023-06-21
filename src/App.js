@@ -20,7 +20,7 @@ const App = () => {
   useEffect(() => {
     loadData();
   }, []);
-  // console.log(user)
+  console.log(user)
   
   return (
 
