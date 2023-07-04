@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import axios from "axios";
 
 const ContactData = () => {
   const [user, setUser] = useState([]);
+  // const navigate=useNavigate()
 
   const showData = async () => {
     const res = await axios.get(
       "https://online-restorent.onrender.com/showcontactdata"
     );
     setUser(res.data);
+    
   };
 
   useEffect(() => {
@@ -32,7 +34,8 @@ const ContactData = () => {
     <>
       <div className="container position-relative p-3">
         <h1>Commented Data</h1>
-        {user.map((data, index) => (
+        {Array.isArray(user) && user.map((data, index) => (
+        // {user.map((data, index) => (
           <div key={index} style={style}>
             <div className="col-12 p-2" style={{ display: "flex"}}>
               <div style={{width:"98%"}}>{data.name}</div>
